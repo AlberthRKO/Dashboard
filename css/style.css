@@ -1,0 +1,167 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+}
+
+
+
+/* estilo boton hamburguesa */
+.boton-hamburguesa::before{
+
+    font-family: "Font Awesome 5 Pro";
+    content: "\f0c9";
+    font-weight: 900;
+    font-size: 1.5rem;
+    outline: 0;
+}
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border: none !important;
+}
+
+
+/*-------------------------------------------
+1. Estilo para El side bar o menu de navegacion al costado
+-------------------------------------------*/
+
+/* estilo para el navbar sidebar */
+.sidebar{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)), url(../img/img1.jpeg) center center / cover no-repeat;
+    box-shadow: 0px 5px 15px black;
+}
+.bordeAbajo{
+    border-bottom: 1px groove #eee;
+}
+/* imagen en circulo */
+.circulo{
+    display: inline-block;
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  .circulo img {
+    width: auto;
+    height: 100%;
+    margin-left: -.82rem;
+  }
+
+
+/* Estilos a los links del navbar */
+.sidebar-link{
+    transition: all .4s ease;
+}
+
+.sidebar-link:hover{
+ background-color: #444;
+ border-radius: 5px;
+}
+
+.sidebar-active{
+    background-color: #f44336;
+    border-radius: 7px;
+    box-shadow: 2px 5px 10px #111;
+    transition: all .3s ease;
+}
+.sidebar-active:hover{
+    background-color: #d43a2f;
+    box-shadow: 2px 5px 20px #111;
+    transform: translateY(-3px);
+}
+ 
+/* estilo para el input buscador y boton*/
+.input-buscador{
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #eee;
+    transition: all .4s ease;
+}
+.input-buscador:focus{
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    
+    box-shadow: none;
+    border-bottom: 1px solid #d43a2f;
+}
+
+.boton-buscador{
+    border-radius: 50%;
+    padding: 10px 16px;
+    transition: all .4s ease;
+}
+.boton-buscador:hover{
+    background-color: #eee;
+    transform: translateY(-2px);
+}
+/* estilos para los numeros arriba en el icono  */
+
+.numeros-pestaña{
+    position: relative;
+}
+.numeros::after{
+    content: "11";
+    text-align: center;
+    font-size: 8px;
+    color: white;
+    position: absolute;
+    background-color: #f44336;
+    top: 7px;
+    left: 25px;
+    bottom: 0;
+    width: 15px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+
+/*-------------------------------------------
+2. Estilo para los cards
+-------------------------------------------*/
+.estilo-card{
+    box-shadow:  1px 2px 5px #999;
+    transition: all .4s ease;
+}
+.estilo-card:hover{
+    box-shadow: 2px 3px 15px #999;
+    transform: translateY(-5px);
+}
+
+/*-------------------------------------------
+3. Estilo para los tablas
+-------------------------------------------*/
+/* Alineamiento de tablas por el boton */
+#tablas tr td, #tablas tr th{
+    vertical-align: middle;
+}
+
+
+/*-------------------------------------------
+3. Estilo para los tareas
+-------------------------------------------*/
+.borderCostado{
+    border-left: 3px solid #f44336;
+}
+
+
+
+
+/*-----------------------------------
+ SHOW DE LAS MEDIAS QUERYS 
+ -----------------------------------*/
+
+@media (max-width:768px){
+    .sidebar{
+        /* asemos al sidebar estatico para que no ocupe toda la pantalla */
+        position: static;
+        height: auto;
+    }
+    .navbar-abajo{
+        position: static;
+    }
+}
+

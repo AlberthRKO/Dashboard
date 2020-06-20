@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Alberth</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+
+    <!-- Barra de navegacion -->
+    <nav class="navbar navbar-expand-md navbar-light">
+
+        <a href="#" class="navbar-brand">
+            <img src="img/logaso.png" alt="" class="img-fluid" width="80">
+            <span class="h4 font-weight-bold align-middle text-dark" style="font-family: 'kaushan Script',cursive;">ApCorp</span>
+        </a>
+        <!-- ml-auto se ira al borde el icono, arrancara desde ahi -->
+        <button type="button" class="navbar-toggler ml-auto bg-light" data-toggle="collapse" data-target="#mimenu">
+            <span class="boton-hamburguesa"></span>
+        </button>
+
+        <!-- elemento victima -->
+        <div class="collapse navbar-collapse" id="mimenu">
+            <!-- Contenido -->
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- sideBar -->
+                    <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+                        <a href="#" class="navbar-brand text-white d-block text-center mx-auto py-1 mb-3 bordeAbajo">
+                            <img src="img/logaso.png" alt="" class="img-fluid" width="80">
+                            <span class="h4 font-weight-bold align-middle" style="font-family: 'kaushan Script',cursive;">ApCorp</span>
+                        </a>
+                        <!-- Campo perfil -->
+                        <div class="d-flex align-items-center justify-content-center    pb-3 bordeAbajo">
+                            <!-- clase circulo para imagenes rectangunlas -->
+                            <div>
+                                <img src="img/admin.jpg" alt="Perfil de usuario" class="img-fluid" width="50" style="border-radius: 50%;">
+                            </div>
+                            <a href="#" class="text-white ml-4" style="text-decoration: none;">Marlen Yucra</a>
+                        </div>
+
+                        <!-- creamos la lista de la navegacion -->
+                        <!-- flex-colum hacemos que se pongan en columnas los li -->
+                        <ul class="navbar-nav flex-column mt-4">
+                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2   sidebar-active"><i class="fas fa-home fa-lg mr-3 text-light fa-fw"></i>Dashboard</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2   sidebar-link"><i class="fas fa-user fa-lg mr-3 text-light fa-fw"></i>Perfil</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2   sidebar-link"><i class="fas fa-envelope fa-lg mr-3 text-light fa-fw"></i>Chat</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2   sidebar-link"><i class="fas fa-shopping-cart fa-lg mr-3 text-light fa-fw"></i>Compras</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2   sidebar-link"><i class="fas fa-chart-line fa-lg mr-3 text-light fa-fw"></i>Estadisticas</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2   sidebar-link"><i class="fas fa-chart-bar fa-lg mr-3 text-light fa-fw"></i>Progresos</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2   sidebar-link"><i class="fas fa-table fa-lg mr-3 text-light fa-fw"></i>Tablas</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2   sidebar-link"><i class="fas fa-wrench fa-lg mr-3 text-light fa-fw"></i>Ajustes</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2   sidebar-link"><i class="fas fa-file-alt fa-lg mr-3 text-light fa-fw"></i>Documentación</a></li>
+                        </ul>
+                        
+                    </div>
+                    
+                    <!-- .nav arriba del dashboard -->
+                    <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-dark fixed-top py-md-2 pb-0       navbar-abajo">
+                        <div class="row align-items-center">
+                            <!-- damos espacios para el titulo, buscador y iconos -->
+                            <div class="col-md-4">
+                                <h4 class="text-light text-md-left text-center mb-0 pt-2 pt-md-0 text-uppercase">Dashboard</h4>
+                            </div>
+                            <div class="col-md-5">
+                                <form>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control mt-2 pb-3  input-buscador" placeholder="Buscar">
+                                        <button type="button" class="btn bg-light  boton-buscador"><i class="fas fa-search text-danger"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-3 py-2 py-md-0">
+                                <ul class="d-flex justify-content-center list-unstyled m-0 p-0">
+                                    <li class="nav-item     numeros-pestaña"><a href="#" class="nav-link numeros"><i class="fas fa-comments text-muted fa-lg"></i></a></li>
+                                    <li class="nav-item     numeros-pestaña"><a href="#" class="nav-link numeros"><i class="fas fa-bell text-muted fa-lg"></i></a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link"   data-toggle="modal" data-target="#salir"><i class="fas fa-sign-out-alt text-danger fa-lg"></i></a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Seccion de modal  -->
+
+    <!-- ponemos efecto fade en el modal para que entre y salga con transicion -->
+    <div class="modal fade" id="salir">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Contenido del modal -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Desea salir ?</h4>
+                    <!-- data-dismis cierra el modal  -->
+                    <button type="button" class="close" style="outline: 0;" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- contenido -->
+                <div class="modal-body">
+                    Presione cerrar sesión para salir
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Seguir</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar Sesion</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- DASHBOARD -->
+    <!-- Seccion de cards  -->
+
+    <section id="cards">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Posicionamos el contenido para todo el dashboard -->
+                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                    <!-- creamos nueva fila para los cards -->
+                    <div class="row mt-1 mb-4">
+
+
+                        <div class="col-xl-3 col-sm-6 col-12 p-2">
+                            <div class="card estilo-card">
+                                <div class="card-body d-flex justify-content-between">
+                                    <div>
+                                        <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    </div>
+
+                                    <!-- precios -->
+                                    <div class="text-right">
+                                        <h5>Compras</h5>
+                                        <h3>$120.000</h3>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <i class="fas fa-sync fa-spin mr-3"></i>
+                                    <span>Actualizando</span> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-sm-6 col-12 p-2">
+                            <div class="card estilo-card">
+                                <div class="card-body d-flex justify-content-between">
+                                    <div>
+                                        <i class="fas fa-money-bill-alt fa-3x text-success"></i>
+                                    </div>
+
+                                    <!-- precios -->
+                                    <div class="text-right">
+                                        <h5>Gastos</h5>
+                                        <h3>$40.000</h3>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <i class="fas fa-sync fa-spin mr-3"></i>
+                                    <span>Actualizando</span> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-sm-6 col-12 p-2">
+                            <div class="card estilo-card">
+                                <div class="card-body d-flex justify-content-between">
+                                    <div>
+                                        <i class="fas fa-users fa-3x text-info"></i>
+                                    </div>
+
+                                    <!-- precios -->
+                                    <div class="text-right">
+                                        <h5>Usuarios</h5>
+                                        <h3>12.000</h3>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <i class="fas fa-sync fa-spin mr-3"></i>
+                                    <span>Actualizando</span> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-sm-6 col-12 p-2">
+                            <div class="card estilo-card">
+                                <div class="card-body d-flex justify-content-between">
+                                    <div>
+                                        <i class="fas fa-chart-line fa-3x text-danger"></i>
+                                    </div>
+
+                                    <!-- precios -->
+                                    <div class="text-right">
+                                        <h5>Visitas</h5>
+                                        <h3>45.000</h3>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <i class="fas fa-sync fa-spin mr-3"></i>
+                                    <span>Actualizando</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- seccion de tablas -->
+    <section id="tablas">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                    <div class="row mb-4 align-items-center">
+
+
+                        <!-- Tablas -->
+                    
+                        <!-- Tabla Blanca -->
+                        <div class="col-12 col-xl-6 mb-3 mb-xl-0">
+                            <h3 class="text-muted text-center mb-3">Salario del Personal</h3>
+
+                            <!-- clase table de bootstrap que le da el estilo -->
+                            <!-- table-striped hace que se intercalen los bgs de la tabla -->
+                            <div class="table-responsive">
+                                <table class="table table-striped bg-light text-center">
+                                    <thead>
+                                        <tr class="text-muted">
+                                            <th>#</th>
+                                            <th>Nombre</th>
+                                            <th>Salario</th>
+                                            <th>Fecha</th>
+                                            <th>Contacto</th>
+                                        </tr>
+                                    </thead>
+                                    <!-- body de las tablas -->
+                                    <tbody>
+                                        <!-- fila -->
+                                        <tr>
+                                            <th>1</th>
+                                            <td>Alberth Paredes</td>
+                                            <td>$2000</td>
+                                            <td>14/05/2020</td>
+                                            <td><button type="button" class="btn btn-info btn-">Mensaje</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th>2</th>
+                                            <td>Orlando Paredes</td>
+                                            <td>$1500</td>
+                                            <td>01/04/2020</td>
+                                            <td><button type="button" class="btn btn-info btn-">Mensaje</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th>3</th>
+                                            <td>Marlen Yucra</td>
+                                            <td>$1800</td>
+                                            <td>22/10/2020</td>
+                                            <td><button type="button" class="btn btn-info btn-">Mensaje</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th>4</th>
+                                            <td>Joel Paredes</td>
+                                            <td>$1300</td>
+                                            <td>06/11/2020</td>
+                                            <td><button type="button" class="btn btn-info btn-">Mensaje</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <td>Benjamin Paredes</td>
+                                            <td>$1000</td>
+                                            <td>16/09/2020</td>
+                                            <td><button type="button" class="btn btn-info btn-">Mensaje</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Paginacion -->
+                            <nav>
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item"><a href="#" class="page-link py-2 px-3"><span>&laquo;</span></a></li>
+                                    <li class="page-item active"><a href="#" class="page-link py-2 px-3">1</a></li>
+                                    <li class="page-item"><a href="#" class="page-link py-2 px-3">2</a></li>
+                                    <li class="page-item"><a href="#" class="page-link py-2 px-3">3</a></li>
+                                    <li class="page-item"><a href="#" class="page-link py-2 px-3"><span>&raquo;</span></a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+
+
+                        <!-- Tabla oscura -->
+                        <div class="col-12 col-xl-6">
+                            <h3 class="text-muted text-center mb-3">Restablecer Pagos</h3>
+                        
+                            <div class="table-responsive">
+                                <table class="table text-center table-dark table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Fecha</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </thead>
+    
+                                    <tbody>
+                                        <tr>
+                                            <th>1</th>
+                                            <td>Monica</td>
+                                            <td>$1500</td>
+                                            <td>25/02/2020</td>
+                                            <td><span class="badge badge-success px-2 py-2">Aprobado</span></td>
+                                        </tr>
+    
+                                        <tr>
+                                            <th>2</th>
+                                            <td>Nick</td>
+                                            <td>$1500</td>
+                                            <td>20/03/2019</td>
+                                            <td><span class="badge badge-warning px-2 py-2">Pendiente</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th>2</th>
+                                            <td>Michael</td>
+                                            <td>$1000</td>
+                                            <td>02/05/2020</td>
+                                            <td><span class="badge badge-warning px-2 py-2">Pendiente</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th>4</th>
+                                            <td>Jane</td>
+                                            <td>$1800</td>
+                                            <td>20/05/2020</td>
+                                            <td><span class="badge badge-warning px-2 py-2">Pendiente</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <td>Juan</td>
+                                            <td>$1200</td>
+                                            <td>12/11/2019</td>
+                                            <td><span class="badge badge-success px-2 py-2">Aprobado</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th>6</th>
+                                            <td>Rolando</td>
+                                            <td>$1600</td>
+                                            <td>09/10/2019</td>
+                                            <td><span class="badge badge-warning px-2 py-2">Pendiente</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+
+                            <nav>
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item"><a href="#" class="page-link py-2 px-3">Atras</a></li>
+                                    <li class="page-item active"><a href="#" class="page-link py-2 px-3">1</a></li>
+                                    <li class="page-item"><a href="#" class="page-link py-2 px-3">2</a></li>
+                                    <li class="page-item"><a href="#" class="page-link py-2 px-3">3</a></li>
+                                    <li class="page-item"><a href="#" class="page-link py-2 px-3">Siguiente</a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Seccion de Progresiones y Tareas -->
+    <section id="progresos">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                    <div class="row mb-4  align-items-center">
+
+                        <div class="col-12 col-xl-6 mb-4 mb-xl-0">
+
+                            <div class="bg-dark text-white p-4 rounded">
+                                <h4 class="mb-4 text-center">Medidas de Conversión</h4>
+                                <h6 class="mb-4">Google Chrome</h6>
+                                <div class="progress mb-4" style="height: 20px;">
+                                    <div class="progress-bar progress-bar-striped font-weight-bold" style="width: 95%;">95%</div>
+                                </div>
+                                <h6 class="mb-4">Firefox</h6>
+                                <div class="progress mb-4" style="height: 20px;">
+                                    <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: 80%;">80%</div>
+                                </div>
+                                <h6 class="mb-4">Internet Explorer</h6>
+                                <div class="progress mb-4" style="height: 20px;">
+                                    <div class="progress-bar progress-bar-striped font-weight-bold bg-danger" style="width: 70%;">70%</div>
+                                </div>
+                                <h6 class="mb-4">Internet Edge</h6>
+                                <div class="progress mb-2" style="height: 20px;">
+                                    <div class="progress-bar progress-bar-striped font-weight-bold bg-warning" style="width: 50%;">50%</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!-- Tareas  -->
+                        <div class="col-12 col-xl-6">
+                            <h4 class="text-muted p-3 mb-2 pt-0 text-center">Tareas</h4>
+                            
+                            <!-- Creamos los campos para la seccion de tareas -->
+                            <div class="container-fluid bg-white">
+                                <!-- modelo de tareas -->
+                                <div class="row py-3 align-items-center mb-4  borderCostado">
+
+                                    <div class="col-1">
+                                        <i class="fas fa-check-square text-success fa-lg"></i>
+                                    </div>
+                                    <div class="col-8 col-sm-9">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                                    <div class="col-1">
+                                        <!-- data-toggle=tooltip activado por js apodremos editar el tooltip -->
+                                        <!-- data-html="true" activamos el html en las comillas  -->
+                                        <!-- data-placement="top" indicamos el lugar dnd queremos que se muestre el tooltip -->
+                                        <a href="#" data-toggle="tooltip" title="<h6>Editar</h6>" data-placement="top" data-html="true"><i class="fas fa-edit text-success fa-lg"></i></a>
+                                    </div>
+                                    <div class="col-1">
+                                        <a href="#" data-toggle="tooltip" title="<h6>Eliminar</h6>" data-placement="top" data-html="true"><i class="fas fa-trash-alt text-danger fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid bg-white">
+                                <!-- modelo de tareas -->
+                                <div class="row py-3 align-items-center mb-4  borderCostado">
+
+                                    <div class="col-1">
+                                        <i class="fas fa-check-square text-success fa-lg"></i>
+                                    </div>
+                                    <div class="col-8 col-sm-9">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                                    <div class="col-1">
+                                        <!-- data-toggle=tooltip activado por js apodremos editar el tooltip -->
+                                        <!-- data-html="true" activamos el html en las comillas  -->
+                                        <!-- data-placement="top" indicamos el lugar dnd queremos que se muestre el tooltip -->
+                                        <a href="#" data-toggle="tooltip" title="<h6>Editar</h6>" data-placement="top" data-html="true"><i class="fas fa-edit text-success fa-lg"></i></a>
+                                    </div>
+                                    <div class="col-1">
+                                        <a href="#" data-toggle="tooltip" title="<h6>Eliminar</h6>" data-placement="top" data-html="true"><i class="fas fa-trash-alt text-danger fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid bg-white">
+                                <!-- modelo de tareas -->
+                                <div class="row py-3 align-items-center mb-4  borderCostado">
+
+                                    <div class="col-1">
+                                        <i class="fas fa-check-square text-success fa-lg"></i>
+                                    </div>
+                                    <div class="col-8 col-sm-9">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                                    <div class="col-1">
+                                        <!-- data-toggle=tooltip activado por js apodremos editar el tooltip -->
+                                        <!-- data-html="true" activamos el html en las comillas  -->
+                                        <!-- data-placement="top" indicamos el lugar dnd queremos que se muestre el tooltip -->
+                                        <a href="#" data-toggle="tooltip" title="<h6>Editar</h6>" data-placement="top" data-html="true"><i class="fas fa-edit text-success fa-lg"></i></a>
+                                    </div>
+                                    <div class="col-1">
+                                        <a href="#" data-toggle="tooltip" title="<h6>Eliminar</h6>" data-placement="top" data-html="true"><i class="fas fa-trash-alt text-danger fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid bg-white">
+                                <!-- modelo de tareas -->
+                                <div class="row py-3 align-items-center mb-4  borderCostado">
+
+                                    <div class="col-1">
+                                        <i class="fas fa-check-square text-success fa-lg"></i>
+                                    </div>
+                                    <div class="col-8 col-sm-9">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                                    <div class="col-1">
+                                        <!-- data-toggle=tooltip activado por js apodremos editar el tooltip -->
+                                        <!-- data-html="true" activamos el html en las comillas  -->
+                                        <!-- data-placement="top" indicamos el lugar dnd queremos que se muestre el tooltip -->
+                                        <a href="#" data-toggle="tooltip" title="<h6>Editar</h6>" data-placement="top" data-html="true"><i class="fas fa-edit text-success fa-lg"></i></a>
+                                    </div>
+                                    <div class="col-1">
+                                        <a href="#" data-toggle="tooltip" title="<h6>Eliminar</h6>" data-placement="top" data-html="true"><i class="fas fa-trash-alt text-danger fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid bg-white">
+                                <!-- modelo de tareas -->
+                                <div class="row py-3 align-items-center mb-4  borderCostado">
+
+                                    <div class="col-1">
+                                        <i class="fas fa-check-square text-success fa-lg"></i>
+                                    </div>
+                                    <div class="col-8 col-sm-9">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                                    <div class="col-1">
+                                        <!-- data-toggle=tooltip activado por js apodremos editar el tooltip -->
+                                        <!-- data-html="true" activamos el html en las comillas  -->
+                                        <!-- data-placement="top" indicamos el lugar dnd queremos que se muestre el tooltip -->
+                                        <a href="#" data-toggle="tooltip" title="<h6>Editar</h6>" data-placement="top" data-html="true"><i class="fas fa-edit text-success fa-lg"></i></a>
+                                    </div>
+                                    <div class="col-1">
+                                        <a href="#" data-toggle="tooltip" title="<h6>Eliminar</h6>" data-placement="top" data-html="true"><i class="fas fa-trash-alt text-danger fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Seccion de Personal -->
+
+    <section id="personal">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                    <div class="row mb-4 align-items-center">
+
+                        <div class="col-12 col-xl-7">
+                            <h4 class="text-muted mb-4 text-center">Actividades Recientes</h4>
+                            <!-- ponemos el id acordio para que cuando se haga click en uno el otro se encoja -->
+                            <!-- data-parent #acordion tiene que estar en cada card-body para q se encoja -->
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <!-- creamos un boton para que se abra el texto card-body -->
+                                        <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#personal1">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/cust1.jpeg" alt="Cliente 1" width="50" class="img-fluid rounded mr-3">
+                                                <span>Alberth a hecho un comentario</span>
+                                            </div>
+                                        </button>
+                                    </div>
+
+                                    <div class="collapse show" id="personal1" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem explicabo impedit molestiae velit labore obcaecati minus et earum quibusdam nihil ea, asperiores quisquam id aliquam, illum saepe quod? Esse, velit!
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <!-- creamos un boton para que se abra el texto card-body -->
+                                        <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#personal2">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/cust2.jpeg" alt="Cliente 2" width="50" class="img-fluid rounded mr-3">
+                                                <span>Jhon a hecho un comentario</span>
+                                            </div>
+                                        </button>
+                                    </div>
+
+                                    <div class="collapse" id="personal2" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem explicabo impedit molestiae velit labore obcaecati minus et earum quibusdam nihil ea, asperiores quisquam id aliquam, illum saepe quod? Esse, velit!
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <!-- creamos un boton para que se abra el texto card-body -->
+                                        <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#personal3">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/cust3.jpeg" alt="Cliente 3" width="50" class="img-fluid rounded mr-3">
+                                                <span>Monica a hecho un comentario</span>
+                                            </div>
+                                        </button>
+                                    </div>
+
+                                    <div class="collapse" id="personal3" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem explicabo impedit molestiae velit labore obcaecati minus et earum quibusdam nihil ea, asperiores quisquam id aliquam, illum saepe quod? Esse, velit!
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <!-- creamos un boton para que se abra el texto card-body -->
+                                        <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#personal4">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/cust4.jpeg" alt="Cliente 4" width="50" class="img-fluid rounded mr-3">
+                                                <span>Marlen a hecho un comentario</span>
+                                            </div>
+                                        </button>
+                                    </div>
+
+                                    <div class="collapse" id="personal4" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem explicabo impedit molestiae velit labore obcaecati minus et earum quibusdam nihil ea, asperiores quisquam id aliquam, illum saepe quod? Esse, velit!
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <!-- creamos un boton para que se abra el texto card-body -->
+                                        <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#personal5">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/cust5.jpeg" alt="Cliente 5" width="50" class="img-fluid rounded mr-3">
+                                                <span>Orlando a hecho un comentario</span>
+                                            </div>
+                                            
+                                        </button>
+                                    </div>
+
+                                    <div class="collapse" id="personal5" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem explicabo impedit molestiae velit labore obcaecati minus et earum quibusdam nihil ea, asperiores quisquam id aliquam, illum saepe quod? Esse, velit!
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <!-- creamos un boton para que se abra el texto card-body -->
+                                        <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#personal6">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/cust6.jpeg" alt="Cliente 6" width="50" class="img-fluid rounded mr-3">
+                                                <span>Ruth a hecho un comentario</span>
+                                            </div>
+                                            
+                                        </button>
+                                    </div>
+
+                                    <div class="collapse" id="personal6" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem explicabo impedit molestiae velit labore obcaecati minus et earum quibusdam nihil ea, asperiores quisquam id aliquam, illum saepe quod? Esse, velit!
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-12 col-xl-5 mt-4 mt-xl-0">
+                            <div class="card rounded">
+                                <div class="card-body">
+                                    <!-- contenido de titulo y lista -->
+                                    <h5 class="text-muted text-center mb-4">Mensaje de Estado</h5>
+                                    <ul class="list-inline text-center py-3">
+                                        <li class="list-inline-item mr-4">
+                                            <a href="#" style="text-decoration: none;"><i class="fas fa-pencil-alt text-success"></i><span class="h6 ml-2 text-secondary">Estado</span></a>
+                                        </li>
+                                        <li class="list-inline-item mr-4">
+                                            <a href="#" style="text-decoration: none;"><i class="fas fa-photo-video text-info"></i><span class="h6 ml-2 text-secondary">Fotos</span></a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" style="text-decoration: none;"><i class="fas fa-map-marker-alt text-primary"></i><span class="h6 ml-2 text-secondary">Registrarse</span></a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- formulario -->
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control py-2 mb-3" placeholder="Cual es tu estado...">
+                                            <button type="button" class="btn btn-info btn-block text-uppercase py-2 font-weight-bold mb-4">Enviar respuesta</button>
+                                        </div>
+                                    </form>
+                                    <!-- creamos otra fila para los iconos -->
+                                    <div class="row text-center mb-3">
+                                        <div class="col-6">
+                                            <div class="card bg-light">
+                                                <i class="fas fa-calendar-alt text-warning fa-6x py-3"></i>
+                                                <div class="card-body">
+                                                    <h5 class="text-muted font-weight-bold card-text">VIE, JUN 28</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card bg-light">
+                                                <i class="fas fa-clock text-danger fa-6x py-3"></i>
+                                                <div class="card-body">
+                                                    <h5 class="text-muted font-weight-bold card-text">2:45 PM</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                    <div class="row align-items-center mt-3 border-top pt-3">
+                        <div class="col-lg-6 text-center">
+                            <ul class="list-inline">
+                                <li class="list-inline-item mr-2"><a href="#" class="text-dark" style="text-decoration: none;">ApCorp</a></licl>
+                                <li class="list-inline-item mr-2"><a href="#" class="text-dark" style="text-decoration: none;">Nosotros</a></licl>
+                                <li class="list-inline-item mr-2"><a href="#" class="text-dark" style="text-decoration: none;">Soporte</a></licl>
+                                <li class="list-inline-item mr-2"><a href="#" class="text-dark" style="text-decoration: none;">Contactanos</a></licl>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <p class="text-dark mb-1"><i class="fas fa-copyright text-primary"></i> 2020 Copyright by <span class="text-success font-weight-bold h5">ApCorp</span></p>
+                            <p>Todos los derechos reservados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<section id="Progresos">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                    
+                    <div class="row mb-5">
+                        <!-- Progresos -->
+                        <div class="col-12 col-xl-6">
+
+                            <div class="bg-dark text-white p-4 rounded">
+                                <h4 class="mb-4 text-center">Medidas de conversión</h4>
+                                <h6 class="mb-3">Google Chrome</h6>
+                                <!-- aumentamos tamaño de la progresion -->
+                                <div class="progress mb-3" style="height: 20px;">
+                                    <div class="progress-bar progress-bar-striped font-weight-bold" style="width: 90%;">90%</div>
+                                </div>
+                                <h6 class="mb-3">Mozilla Firefox</h6>
+                                <!-- aumentamos tamaño de la progresion -->
+                                <div class="progress mb-3" style="height: 20px;">
+                                    <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: 89%;">89%</div>
+                                </div>
+                                <h6 class="mb-3">Internet Explorer</h6>
+                                <!-- aumentamos tamaño de la progresion -->
+                                <div class="progress mb-3" style="height: 20px;">
+                                    <div class="progress-bar progress-bar-striped font-weight-bold bg-danger" style="width: 83%;">83%</div>
+                                </div>
+                                <h6 class="mb-3">Internet Edge</h6>
+                                <!-- aumentamos tamaño de la progresion -->
+                                <div class="progress mb-2" style="height: 20px;">
+                                    <div class="progress-bar progress-bar-striped font-weight-bold bg-warning" style="width: 70%;">70%</div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
